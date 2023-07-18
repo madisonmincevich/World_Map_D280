@@ -5,10 +5,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./countryinformation.component.css'],
 })
 export class CountryinformationComponent {
-  @Input() name!: string;
+  heading: string = 'Country Information';
+
+  @Input() countryName!: string;
   @Input() capital!: string;
   @Input() region!: string;
-  @Input() income!: string;
+  @Input() incomeLevel!: string;
   @Input() latitude!: string;
   @Input() longitude!: string;
 }

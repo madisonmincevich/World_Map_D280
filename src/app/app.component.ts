@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'Interactive World Map';
 
-  name!: string;
+  countryName!: string;
   capital!: string;
   region!: string;
-  income!: string;
+  incomeLevel!: string;
   latitude!: string;
   longitude!: string;
 
-  onNameChange(value: string) {
-    this.name = value;
+  onCountryNameChange(value: string) {
+    this.countryName = value;
   }
 
   onCapitalChange(value: string) {
@@ -27,8 +27,8 @@ export class AppComponent {
     this.region = value;
   }
 
-  onIncomeChange(value: string) {
-    this.income = value;
+  onIncomeLevelChange(value: string) {
+    this.incomeLevel = value;
   }
 
   onLatitudeChange(value: string) {

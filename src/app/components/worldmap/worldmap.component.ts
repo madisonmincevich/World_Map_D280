@@ -7,12 +7,10 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./worldmap.component.css'],
 })
 export class WorldmapComponent {
-  over: string = 'Hovering not working';
-
-  @Output() name = new EventEmitter();
+  @Output() countryName = new EventEmitter();
   @Output() capital = new EventEmitter();
   @Output() region = new EventEmitter();
-  @Output() income = new EventEmitter();
+  @Output() incomeLevel = new EventEmitter();
   @Output() latitude = new EventEmitter();
   @Output() longitude = new EventEmitter();
 
@@ -25,10 +23,10 @@ export class WorldmapComponent {
 
     this.apiService.fetchCountryData(id).subscribe((info: any) => {
       let res = info[1][0];
-      this.name.emit(res.name);
+      this.countryName.emit(res.name);
       this.capital.emit(res.capitalCity);
       this.region.emit(res.region.value);
-      this.income.emit(res.incomeLevel.value);
+      this.incomeLevel.emit(res.incomeLevel.value);
       this.latitude.emit(res.latitude);
       this.longitude.emit(res.longitude);
       console.log(res);

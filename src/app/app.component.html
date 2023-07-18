@@ -4,28 +4,44 @@
 <hr />
 <div class="container">
   <div class="column">
-    <div class="worldMap">
+    <div class="worldMapComponent">
       <app-worldmap
-        (name)="onNameChange($event)"
+        (countryName)="onCountryNameChange($event)"
         (capital)="onCapitalChange($event)"
         (region)="onRegionChange($event)"
-        (income)="onIncomeChange($event)"
+        (incomeLevel)="onIncomeLevelChange($event)"
         (latitude)="onLatitudeChange($event)"
         (longitude)="onLongitudeChange($event)"
       ></app-worldmap>
     </div>
   </div>
-  <div class="countryInfo">
+  <div class="countryInformationComponent">
     <div class="column">
       <app-countryinformation
-        [name]="name"
+        [countryName]="countryName"
         [capital]="capital"
         [region]="region"
-        [income]="income"
+        [incomeLevel]="incomeLevel"
         [latitude]="latitude"
         [longitude]="longitude"
       ></app-countryinformation>
     </div>
   </div>
 </div>
-<footer>Coded by Maddie Mincevich</footer>
+<footer>
+  <h4>Sources:</h4>
+  <p>
+    World Map SVG:
+    <a href="http://innovsandbox.space/map.html" target="_blank"
+      >http://innovsandbox.space/map.html</a
+    >
+  </p>
+  <p>
+    API:
+    <a
+      href="https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures"
+      target="_blank"
+      >https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures</a
+    >
+  </p>
+</footer>
