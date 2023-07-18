@@ -1,0 +1,16 @@
+header {
+  color: #132743;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 35px;
+}
+.container {
+  display: flex;
+}
+
+.column {
+  flex: 0 0 80%;
+}
